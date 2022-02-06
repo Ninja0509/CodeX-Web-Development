@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 50px;
+  height: 400%;
+}
+hr.new2 {
+  border-top: 4px dashed gray;
+}
+
+#Home {background-color: red;}
+#News {background-color: #ffffbf;color:black;}
+#Contact {background-color: blue;}
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Buy Pet</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">HealthCare</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Logout</button>
+
+<div id="Home" class="tabcontent">
+  <h3>See Some of our pets !</h3>
+ <h4 style ="text-align:center;font-family:verdana;color:blue;"><u>POODLE</u></h4>
+<h4 style ="font-size:100%;font-family:arial;"></h4>
+<img src ="https://a-z-animals.com/media/Poodle-Canis-familiaris-white.jpg" width="200" height="80" border='2' style="float:right">
+
+<hr class="new2">
+<h4 style ="text-align:center;font-family:verdana;color:blue;"><u>LABRADOR</u></h4>
+<h4 style ="font-size:100%;font-family:arial;"></h4>
+
+<hr class="new2">
+<h4 style ="text-align:center;font-family:verdana;color:blue;"><u>TURTLES</u></h4>
+<h4 style ="font-size:100%;font-family:arial;"></h4>
+<img src ="https://cdn.cnn.com/cnnnext/dam/assets/200812120128-green-turtle-baby-malaysia-1-full-169.jpg" width="200" height="80" border='2' style="float:right">
+
+<hr class="new2">
+<h4 style ="text-align:center;font-family:verdana;color:blue;"><u>CAT</u></h4>
+  <h4 style ="font-size:100%;font-family:arial;"></h4>
+<img src ="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-boy-cat-names-1606242656.jpg" width="200" height="80" border='2' style="float:right">
+  <button onclick = "buypet()">Click here to Buy Pets</button>
+  </div>
+<div id="News" class="tabcontent" style = "background-color:yellow;">
+  <h3>The best healthcare for your pets !</h3>
+  <h4 style ="text-align:center;font-family:verdana;color:blue;"><u>Veterinarian</u></h4>
+<h4 style ="font-size:100%;font-family:arial;"></h4>
+<img src ="https://www.expatica.com/app/uploads/2018/11/find-a-doctor-abroad.jpg" width="200" height="80" border='2' style="float:right">
+<script>
+document.write("Dr. Michael (ENT) : 080678950"+"<br>")
+document.write("Dr. Robert  (GENERAL)  : 05839363"+"<br>")
+document.write("Dr. Tansley (SURGEON)  : 056939330"+"<br><br>")
+</script>
+  
+<hr class="new2">
+<h4 style ="text-align:center;font-family:verdana;color:blue;"><u>PHARMACY</u></h4>
+<h4 style ="font-size:100%;font-family:arial;"></h4>
+<img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/14C5A/production/_111628058_hi060916215.jpg" width="200" height="80" border='2' style="float:right">
+<script>
+document.write("-> PetCareDare 24/7 "+"<br>")
+document.write("-> PetStop"+"<br>")
+document.write("-> Animal Care"+"<br>")
+document.write("-> PetSpecials"+"<br>")
+</script>
+
+<hr class="new2">
+<h4 style ="text-align:center;font-family:verdana;color:blue;"><u>CLINICS</u></h4>
+  <h4 style ="font-size:100%;font-family:arial;"></h4>
+<img src ="https://mybayutcdn.bayut.com/mybayut/wp-content/uploads/Vet-Clinics-in-Sharjah-E-04-06-1024x640.jpg" width="200" height="80" border='2' style="float:right">
+<script>
+document.write("PetNext: 10am - 8pm"+"<br>")
+document.write("PetCare : 8am - 6pm" +"<br>")
+</script>
+
+<hr class="new2">
+<h4 style ="text-align:center;font-family:verdana;color:blue;"><u>DISCOUNTS</u></h4>
+  <h4 style ="font-size:100%;font-family:arial;"></h4>
+<img src ="https://www.wellybox.com/wp-content/uploads/2021/06/Depositphotos_126258766_l-2015.jpg" width="200" height="80" border='2' style="float:right">
+  <mark style='background-color:white;'>
+  <script>
+    document.write("50% : Pet Station"+"<br>")
+    document.write("75% : HealthStopTikeTime"+"<br>")
+  </script>
+  </mark>
+  </div>
+<div id="Contact" class="tabcontent">
+  <h3>Back to the home page !</h3>
+  <a href="file:///C:/Users/neern_couhdoi/Downloads/CODEX1.html">Click here to go back</a>
+</div>
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+function buypet()
+  {
+  	var x = prompt("Enter the name of the pet")
+    var y = prompt("Enter the breed of the pet")
+    
+    document.write("Name: Lucky"+"<br>")
+    document.write("Weight: 30 kg" + "<br>")
+    document.write("Price: 2000 AED")
+
+}
+</script>
+   
+</body>
+ </html>
+</html> 

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.bottom{
+  position: absolute;
+  bottom: -150px;
+  text-align:center;
+  color:black;
+  font-size: 200%;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.about {
+  color: blue;
+  text-align:center;
+  display: none;
+  padding: 150px 20px;
+  font-size:150%;
+}
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.login{
+	background-color:blue;
+  padding: 250px 20px;
+  text-align:center;
+ 	font-size:150%;  
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.top {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center{
+   border-style:groove;
+    border-color:yellow;
+    border-width:10px;
+ }
+.GFG {
+            background-color: navy;
+            border: 2px solid black;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px 30px;
+            cursor: pointer;
+        }
+#Home {background-color: #800080;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" onclick = "myFunction()">Home</button>
+<button class="tablink" onclick="openPage('Login', this, 'green')" id="defaultOpen">Login</button>
+<button class="tablink" onclick="openPage('Sign Up', this, 'blue')">Sign Up</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <div class="container">
+  <img src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/13/3osEf5bM-pets-shops-in-dubai.jpg"alt="Snow" style="width:80%;" style="height:10%">
+    <div class="top"><h1>WELCOME TO PET NATION!</h1></div>
+    <div class="bottom"><h4>" THE ONE STOP SHOP FOR ALL PET LOVERS "</h4></div>
+</div>
+  </div>
+
+<div id="Login" class="tabcontent">
+  <h3>Login</h3>
+  <p>Enter your details here !</p> 
+  <div class = "center">
+  <form>
+    Username:<br>
+    <input type="text" name="Username"><br>
+    Password:<br>
+    <input type="text" name="password"><br><br>
+    <a href="file:///C:/Users/neern_couhdoi/Downloads/Codex2.html">Click Here to Continue</a>
+  </form>
+   
+  </div>
+</div>
+
+<div id="Sign Up" class="tabcontent">
+  <h3>Sign Up to Unlock our Various Features</h3>
+  <div class = "center">
+  <form>
+    Username:<br>
+    <input type="text" name="Username"><br>
+    Email:<br>
+    <input type="email" name="Email ID"><br>
+    Password:<br>
+    <input type="text" name="password"><br><br>
+    <a href="file:///C:/Users/neern_couhdoi/Downloads/Codex2.html">Click Here to Continue</a>
+  </form>
+  </div>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+    <p style = "color:black;font-size:100%;font-family:verdana;">We as pet nations provide a lot of services for your pets from buying pets, learning how to take care of your pet depending on his/her breed, appropriate healthcare in case of an illness and last but not least creating a pet profile so he or she can interact with pets of the same kind.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+  
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+   
+</body>
+  
+  </html>
+</html> 
